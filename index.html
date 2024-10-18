@@ -105,10 +105,16 @@
             </div>
         </div>
         <div class="section">
-            <div class="section-header">Publications</div>
-            <p>List your publications here with links to them if available.</p>
+            <div class="section-header">Working Papers</div>
+            <p>The Value of Medicaid Expansion: Evidence from the Oregon Health Insurance Experiment</p>
+            <div class="button-container">
+                <button class="button" onclick="toggleAbstract()">Abstract</button>
+                <a href="full_paper.pdf" class="button">Full Paper</a>
+            </div>
+            <div id="abstractContent">
+                <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
+            </div>
         </div>
-    </div>
     <script>
         function toggleAbstract() {
             var abstractDiv = document.getElementById('abstractContent');
