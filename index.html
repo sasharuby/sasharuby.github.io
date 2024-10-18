@@ -45,15 +45,20 @@
             font-size: 1.5em;
             margin-bottom: 10px;
         }
+        .button-container {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
         .button {
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 5px 10px;
+            padding: 4px 8px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 10px;
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 5px;
@@ -62,9 +67,10 @@
             background-color: #45a049;
         }
         #abstractContent {
-            display: none;
-            min-height: 100px; /* Reserved space to prevent layout shifts */
+            visibility: hidden;
+            height: 0;
             overflow: hidden;
+            transition: visibility 0s, height 0.5s ease-out;
         }
     </style>
 </head>
@@ -76,7 +82,7 @@
             </div>
             <div class="bio">
                 <h1>Sasha Ruby</h1>
-                <p>I am a PhD candidate in the Department of Economics at the University of Virginia. I am a public economist interested in how government transfer program rules shape participant selection. </p>
+                <p>I am a PhD candidate in the Department of Economics at the University of Virginia. I am a public economist interested in how government transfer program rules shape participant selection.</p>
                 <p>I will be on the job market in 2024-2025.</p>
                 <p></p>
                 <p>CV</p>
@@ -86,11 +92,13 @@
         <div class="section">
             <div class="section-header">Job Market Paper</div>
             <p>Title of the Paper</p>
-            <button class="button" onclick="toggleAbstract()">Abstract</button>
-            <div id="abstractContent" style="display:none;">
+            <div class="button-container">
+                <button class="button" onclick="toggleAbstract()">Abstract</button>
+                <a href="full_paper.pdf" class="button">Full Paper</a>
+            </div>
+            <div id="abstractContent">
                 <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
             </div>
-            <a href="full_paper.pdf" class="button">Full Paper</a>
         </div>
         <div class="section">
             <div class="section-header">Publications</div>
@@ -100,10 +108,12 @@
     <script>
         function toggleAbstract() {
             var abstractDiv = document.getElementById('abstractContent');
-            if (abstractDiv.style.display === 'none') {
-                abstractDiv.style.display = 'block';
+            if (abstractDiv.style.visibility === 'hidden') {
+                abstractDiv.style.visibility = 'visible';
+                abstractDiv.style.height = 'auto';
             } else {
-                abstractDiv.style.display = 'none';
+                abstractDiv.style.visibility = 'hidden';
+                abstractDiv.style.height = '0';
             }
         }
     </script>
