@@ -9,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
         body {
-            font-family: Arial, sans-serif; /* Ensures font consistency */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #fff; /* Sets background to white */
+            background-color: #fff;
         }
         .main-container {
-            max-width: 800px; /* Adjust width as necessary */
-            margin: auto; /* Centers the container */
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
         }
         .container {
@@ -27,13 +27,13 @@
             border-bottom: 2px solid #ccc;
         }
         .profile-image {
-            width: 25%; /* Adjust based on your preference */
+            width: 25%;
             padding-right: 20px;
         }
         .profile-image img {
             width: 100%;
             height: auto;
-            border-radius: 5px; /* Softens the image corners */
+            border-radius: 5px;
         }
         .bio {
             width: 75%;
@@ -46,7 +46,7 @@
             margin-bottom: 10px;
         }
         .button {
-            background-color: #4CAF50; /* Green */
+            background-color: #4CAF50;
             border: none;
             color: white;
             padding: 5px 10px;
@@ -59,7 +59,7 @@
             border-radius: 5px;
         }
         .button:hover {
-            background-color: #45a049; /* Darker shade for hover effect */
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -71,8 +71,8 @@
             </div>
             <div class="bio">
                 <h1>Sasha Ruby</h1>
-                <p>I'm a sixth-year PhD candidate at the University of Virginia Department of Economics. 
-                <p>I am a public economist. I am particularly interested in how government transfer program rules shape participant selection.
+                <p>I'm a sixth-year PhD candidate at the University of Virginia Department of Economics.</p>
+                <p>I am a public economist. I am particularly interested in how government transfer program rules shape participant selection.</p>
                 <p>Here is my <a href="cv.pdf">CV</a>. Please e-mail <a href="mailto:sasha@example.com"> to get in touch</a>.</p>
                 <p>I will be on the job market in 2024-2025.</p>
             </div>
@@ -80,7 +80,10 @@
         <div class="section">
             <div class="section-header">Job Market Paper</div>
             <p>Title of the Paper</p>
-            <a href="abstract.pdf" class="button">Abstract</a>
+            <button class="button" onclick="toggleAbstract()">Abstract</button>
+            <div id="abstractContent" style="display:none;">
+                <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
+            </div>
             <a href="full_paper.pdf" class="button">Full Paper</a>
         </div>
         <div class="section">
@@ -88,5 +91,15 @@
             <p>List your publications here with links to them if available.</p>
         </div>
     </div>
+    <script>
+        function toggleAbstract() {
+            var abstractDiv = document.getElementById('abstractContent');
+            if (abstractDiv.style.display === 'none') {
+                abstractDiv.style.display = 'block';
+            } else {
+                abstractDiv.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
