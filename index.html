@@ -13,11 +13,17 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #fff; /* Sets background to white */
+        }
+        .main-container {
+            max-width: 800px; /* Adjust width as necessary */
+            margin: auto; /* Centers the container */
+            padding: 20px;
         }
         .container {
             display: flex;
-            padding: 20px;
             align-items: center;
+            padding: 20px;
             border-bottom: 2px solid #ccc;
         }
         .profile-image {
@@ -58,25 +64,27 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-image">
-            <img src="profile.png" alt="Sasha Ruby">
+    <div class="main-container">
+        <div class="container">
+            <div class="profile-image">
+                <img src="profile.png" alt="Sasha Ruby">
+            </div>
+            <div class="bio">
+                <h1>Sasha Ruby</h1>
+                <p>I'm a PhD candidate at [University], studying [field]. My research focuses on [brief summary]. Here's my <a href="cv.pdf">CV</a>. For inquiries or collaboration, please <a href="mailto:sasha@example.com">get in touch</a>.</p>
+                <p>I will be on the job market in 2024-2025.</p>
+            </div>
         </div>
-        <div class="bio">
-            <h1>Sasha Ruby</h1>
-            <p>I'm a PhD candidate at [University], studying [field]. My research focuses on [brief summary]. Here's my <a href="cv.pdf">CV</a>. For inquiries or collaboration, please <a href="mailto:sasha@example.com">get in touch</a>.</p>
-            <p>I will be on the job market in 2024-2025.</p>
+        <div class="section">
+            <div class="section-header">Job Market Paper</div>
+            <p>Title of the Paper</p>
+            <a href="abstract.pdf" class="button">Abstract</a>
+            <a href="full_paper.pdf" class="button">Full Paper</a>
         </div>
-    </div>
-    <div class="section">
-        <div class="section-header">Job Market Paper</div>
-        <p>Title of the Paper</p>
-        <a href="abstract.pdf" class="button">Abstract</a>
-        <a href="full_paper.pdf" class="button">Full Paper</a>
-    </div>
-    <div class="section">
-        <div class="section-header">Publications</div>
-        <p>List your publications here with links to them if available.</p>
+        <div class="section">
+            <div class="section-header">Publications</div>
+            <p>List your publications here with links to them if available.</p>
+        </div>
     </div>
 </body>
 </html>
