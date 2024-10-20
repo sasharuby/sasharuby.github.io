@@ -3,50 +3,54 @@
 body {
   font: 16px/1.6 "Open Sans", sans-serif;
   color: #2d2d2d;
-  background-color: #f9f9f9;
+  background-color: #fff; /* Set entire background to white */
   margin: 0;
 }
 
 .main-container {
-  width: 60%; /* Occupies 60% of the page width */
+  width: 60%;
   max-width: 850px;
-  margin: 0 auto; /* Center the container */
-  padding: 40px 20px; /* Padding for inner spacing */
+  margin: 0 auto;
+  padding: 40px 20px;
   background: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: center; /* Align items vertically */
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
 
 .profile-image {
-  width: 30%;
+  width: 25%;
   padding-right: 20px;
 }
 
 .profile-image img {
   width: 100%;
+  max-height: 220px; /* Reduce the image height */
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .bio {
-  width: 70%;
+  width: 75%;
 }
 
 h1.main-heading {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  margin-top: 0; /* Remove extra margin to align with image */
+  display: flex;
+  align-items: center; /* Align with the top of the image */
 }
 
 .section-header {
-  font-size: 1.6em;
+  font-size: 1.5em;
   margin: 30px 0 10px;
   font-weight: 500;
 }
@@ -61,7 +65,7 @@ p {
   flex-wrap: wrap;
 }
 
-.button {
+.button, a.button {
   padding: 8px 16px;
   font-size: 14px;
   color: #333;
@@ -70,9 +74,11 @@ p {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  font-weight: 400; /* Ensure consistent weight */
 }
 
-.button:hover {
+.button:hover, a.button:hover {
   background-color: #d4d4d4;
 }
 
@@ -81,6 +87,13 @@ p {
   min-width: 180px;
   padding: 8px 16px;
   white-space: nowrap;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 20px 0;
 }
 
 @media (max-width: 1024px) {
@@ -106,10 +119,9 @@ p {
   }
 }
 
-
-
-  .profile-image {
-    max-width: 80%;
-    margin-bottom: 20px; /* Add spacing below the image */
-  }
+.abstract-section {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: visibility 0s, height 0.5s ease-out;
 }
