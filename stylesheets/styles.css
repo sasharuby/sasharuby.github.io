@@ -1,10 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px/1.4 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #2d2d2d;
   font-weight: 300;
+}
+
+.main-container {
+  max-width: 900px; /* Limit the maximum width for readability */
+  margin: auto;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row; /* Keep image and bio side-by-side */
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.profile-image {
+  flex: 1; /* Allow the image to grow proportionally */
+  max-width: 25%; /* Set a maximum width for the profile image */
+  padding-right: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  max-height: 250px; /* Limit the image height */
+  object-fit: cover; /* Maintain aspect ratio and fill the container */
+  border-radius: 5px;
+}
+
+.bio {
+  flex: 2; /* Allow the bio section to take more space */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,25 +45,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.main-heading {
-  font-size: 1.8em;
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-size: 1.8em; /* Slightly smaller for a refined look */
+  font-weight: 500; /* Set to match the lighter heading style */
+  margin-bottom: 20px; /* Increase spacing below the main heading */
 }
 
 .section-header {
-  font-size: 1.5em;
-  font-weight: 500;
+  font-size: 1.5em; /* Standardize section title size */
+  font-weight: 500; /* Set the weight for section headers */
   margin-bottom: 10px;
 }
 
 .bio p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 14px; /* Match the body text size */
+  line-height: 1.5; /* Improve readability */
 }
 
 .button-container {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .button, a.button {
@@ -69,23 +101,21 @@ hr {
   margin: 20px 0;
 }
 
-.profile-image img {
-  width: 100%;
-  max-height: 250px; /* Set a maximum height for the profile image */
-  object-fit: cover; /* Maintain the aspect ratio and crop if necessary */
-  border-radius: 5px;
-}
-
 @media (max-width: 1024px) {
   .profile-image {
-    width: 30%;
+    max-width: 30%;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack image and bio vertically on smaller screens */
+    align-items: center;
+  }
+
   .profile-image {
-    width: 50%;
-    margin: 0 auto;
+    max-width: 80%;
+    margin-bottom: 20px; /* Add spacing below the image */
   }
 }
 
@@ -94,4 +124,11 @@ hr {
   height: 0;
   overflow: hidden;
   transition: visibility 0s, height 0.5s ease-out;
+}
+
+
+  .profile-image {
+    max-width: 80%;
+    margin-bottom: 20px; /* Add spacing below the image */
+  }
 }
