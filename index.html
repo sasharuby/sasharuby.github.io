@@ -7,86 +7,6 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <script src="https://kit.fontawesome.com/9745af1226.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #fff;
-        }
-        .main-container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            border-bottom: 2px solid #ccc;
-        }
-        .profile-image {
-            width: 35%;
-            padding-right: 20px;
-        }
-        .profile-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .bio {
-            width: 65%;
-        }
-        .section {
-            padding: 20px;
-        }
-        .section-header {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: start;
-            flex-wrap: nowrap;
-            align-items: center;
-            width: 100%;
-        }
-        .button, a.button {
-            background-color: #C8CBD2;
-            border: none;
-            color: #000; /* Black text color */
-            padding: 6px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px; /* Consistent font size for all buttons */
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-            line-height: normal;
-            vertical-align: middle;
-            width: auto;
-        }
-        .button:hover, a.button:hover {
-            background-color: #A6A9B2;
-            color: #000; /* Keep black text on hover */
-        }
-        .contact-button {
-            width: auto; /* Automatically adjusts to the content */
-            min-width: 150px; /* Set a minimum width if needed */
-            padding: 6px 10px; /* Standard padding for a button feel */
-            font-size: 14px; /* Consistent font size */
-            word-break: break-all; /* Allows breaking the email address if it's very long */
-            white-space: nowrap; /* Prevents wrapping within the button */
-        }
-        .abstract-section {
-            visibility: hidden;
-            height: 0;
-            overflow: hidden;
-            transition: visibility 0s, height 0.5s ease-out;
-        }
-    </style>
 </head>
 <body>
     <div class="main-container">
@@ -95,13 +15,17 @@
                 <img src="profile.png" alt="Sasha Ruby">
             </div>
             <div class="bio">
-                <h1>Sasha Ruby</h1>
+                <h1 class="main-heading">Sasha Ruby</h1>
                 <p>I am a PhD candidate in the Department of Economics at the University of Virginia. I am a public economist interested in how government transfer program rules shape participant selection.</p>
                 <p>I will be on the job market in 2024-2025.</p>
-                <a href="files/CV.pdf" class="button">CV</a>
-                <a href="mailto:nathaniel.ruby@email.virginia.edu" class="button contact-button">E-mail: nathaniel.ruby@email.virginia.edu</a>
+                <div class="button-container">
+                    <a href="files/CV.pdf" class="button">CV</a>
+                    <a href="https://scholar.google.com" class="button">Google Scholar</a>
+                    <a href="mailto:nathaniel.ruby@email.virginia.edu" class="button contact-button">Email: nathaniel.ruby@email.virginia.edu</a>
+                </div>
             </div>
         </div>
+        <hr>
         <div class="section">
             <div class="section-header">Job Market Paper</div>
             <p>Targeting Transfers Through Priority Rules: Evidence from the Housing Choice Voucher Program</p>
@@ -158,6 +82,3 @@
     </script>
 </body>
 </html>
-
-
-
