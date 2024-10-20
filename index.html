@@ -77,7 +77,7 @@
             padding: 6px 12px;
             font-size: 12px;
         }
-        #abstractContent {
+        .abstract-section {
             visibility: hidden;
             height: 0;
             overflow: hidden;
@@ -135,12 +135,12 @@
     <script>
         function toggleAbstract(id) {
             var abstractDiv = document.getElementById(id);
-            if (abstractDiv.style.visibility === 'hidden' || abstractDiv.style.visibility === '') {
+            if (abstractDiv.style.visibility === 'hidden' || abstractDiv.style.height === '0px') {
                 abstractDiv.style.visibility = 'visible';
-                abstractDiv.style.height = 'auto'; // Expand to content's height
+                abstractDiv.style.height = abstractDiv.scrollHeight + 'px'; // Expand to the height of the content
             } else {
                 abstractDiv.style.visibility = 'hidden';
-                abstractDiv.style.height = '0'; // Collapse but space is preserved
+                abstractDiv.style.height = '0'; // Collapse to 0 height
             }
         }
     </script>
