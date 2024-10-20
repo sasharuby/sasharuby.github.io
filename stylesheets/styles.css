@@ -43,15 +43,14 @@ body {
 h1.main-heading {
   font-size: 1.8em;
   font-weight: 600;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
   display: flex;
   align-items: center;
 }
 
 .section-header {
   font-size: 1.5em;
-  margin: 30px 0 10px;
+  margin: 30px 0 15px; /* Consistent spacing above and below */
   font-weight: 500;
 }
 
@@ -65,6 +64,7 @@ h1.main-heading {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin: 10px 0 0; /* Consistent margin above buttons */
 }
 
 .button, a.button {
@@ -128,4 +128,5 @@ hr {
   overflow: hidden;
   transition: visibility 0s, height 0.5s ease-out;
 }
+
 
