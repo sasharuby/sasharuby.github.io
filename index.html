@@ -66,7 +66,7 @@
             border-radius: 5px;
             line-height: normal;
             vertical-align: middle;
-            width: 80px;
+            width: auto;
         }
         .button:hover, a.button:hover {
             background-color: #A6A9B2;
@@ -74,7 +74,9 @@
         }
         .contact-button {
             width: auto; /* Automatically adjusts to the content */
+            min-width: 150px; /* Set a minimum width if needed */
             padding: 6px 12px; /* Standard padding for a button feel */
+            font-size: 12px; /* Consistent font size */
             word-break: break-all; /* Allows breaking the email address if it's very long */
             white-space: nowrap; /* Prevents wrapping within the button */
         }
@@ -156,5 +158,6 @@
     </script>
 </body>
 </html>
+
 
 
