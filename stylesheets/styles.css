@@ -60,6 +60,11 @@ h1.main-heading {
   text-decoration: none;
 }
 
+a {
+  color: #3498db; /* A pleasant shade of blue */
+  text-decoration: none; /* Removes the underline */
+}
+
 .button-container {
   display: flex;
   gap: 10px;
