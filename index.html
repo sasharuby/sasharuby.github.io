@@ -55,7 +55,7 @@
         .button, a.button {
             background-color: #C8CBD2;
             border: none;
-            color: white;
+            color: #000; /* Black text color */
             padding: 4px 8px;
             text-align: center;
             text-decoration: none;
@@ -70,17 +70,18 @@
         }
         .button:hover, a.button:hover {
             background-color: #A6A9B2;
+            color: #000; /* Keep black text on hover */
+        }
+        .contact-button {
+            width: auto;
+            padding: 6px 12px;
+            font-size: 12px;
         }
         #abstractContent {
             visibility: hidden;
             height: 0;
             overflow: hidden;
             transition: visibility 0s, height 0.5s ease-out;
-        }
-        .contact-button {
-            width: auto;
-            padding: 6px 12px;
-            font-size: 12px;
         }
     </style>
 </head>
@@ -92,7 +93,7 @@
             </div>
             <div class="bio">
                 <h1>Sasha Ruby</h1>
-                <p>I am a PhD candidate in the Department of Economics at the University of Virginia. I am a public economist interested in how government transfer program rules shape participant selection. </p>
+                <p>I am a PhD candidate in the Department of Economics at the University of Virginia. I am a public economist interested in how government transfer program rules shape participant selection.</p>
                 <p>I will be on the job market in 2024-2025.</p>
                 <a href="files/CV.pdf" class="button">CV</a>
                 <a href="mailto:nathaniel.ruby@email.virginia.edu" class="button contact-button">E-mail: nathaniel.ruby@email.virginia.edu</a>
@@ -102,10 +103,10 @@
             <div class="section-header">Job Market Paper</div>
             <p>Targeting Transfers Through Priority Rules: Evidence from the Housing Choice Voucher Program</p>
             <div class="button-container">
-                <button class="button" onclick="toggleAbstract()">Abstract</button>
+                <button class="button" onclick="toggleAbstract('abstractContent1')">Abstract</button>
                 <a href="full_paper.pdf" class="button">Full Paper</a>
             </div>
-            <div id="abstractContent">
+            <div id="abstractContent1" class="abstract-section">
                 <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
             </div>
         </div>        
@@ -113,9 +114,10 @@
             <div class="section-header">Working Papers</div>
             <p>The Value of Medicaid Expansion: Evidence from the Oregon Health Insurance Experiment (with Daniel Kwiatkowski)</p>
             <div class="button-container">
-                <button class="button" onclick="toggleAbstract()">Abstract</button>
+                <button class="button" onclick="toggleAbstract('abstractContent2')">Abstract</button>
+                <a href="preprint.pdf" class="button">Pre-Print</a>
             </div>
-            <div id="abstractContent">
+            <div id="abstractContent2" class="abstract-section">
                 <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
             </div>
         </div>
@@ -123,16 +125,16 @@
             <div class="section-header">Publications</div>
             <p>Waivers for the Public Service Loan Forgiveness Program: Who Would Benefit from Take-up? (with Diego Briones and Sarah Turner)</p>
             <div class="button-container">
-                <button class="button" onclick="toggleAbstract()">Abstract</button>
+                <button class="button" onclick="toggleAbstract('abstractContent3')">Abstract</button>
             </div>
-            <div id="abstractContent">
+            <div id="abstractContent3" class="abstract-section">
                 <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
             </div>
         </div>
     </div>
     <script>
-        function toggleAbstract() {
-            var abstractDiv = document.getElementById('abstractContent');
+        function toggleAbstract(id) {
+            var abstractDiv = document.getElementById(id);
             if (abstractDiv.style.visibility === 'hidden' || abstractDiv.style.visibility === '') {
                 abstractDiv.style.visibility = 'visible';
                 abstractDiv.style.height = 'auto'; // Expand to content's height
