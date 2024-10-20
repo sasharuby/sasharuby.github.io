@@ -77,6 +77,11 @@
             overflow: hidden;
             transition: visibility 0s, height 0.5s ease-out;
         }
+        .contact-button {
+            width: auto;
+            padding: 6px 12px;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +95,7 @@
                 <p>I am a PhD candidate in the Department of Economics at the University of Virginia. I am a public economist interested in how government transfer program rules shape participant selection. </p>
                 <p>I will be on the job market in 2024-2025.</p>
                 <a href="files/CV.pdf" class="button">CV</a>
-                <p>Contact: nathaniel.ruby@email.virginia.edu</p>
+                <a href="mailto:nathaniel.ruby@email.virginia.edu" class="button contact-button">E-mail: nathaniel.ruby@email.virginia.edu</a>
             </div>
         </div>
         <div class="section">
@@ -124,11 +129,7 @@
                 <p>This is the abstract of the paper. It contains a summary of the key points and findings of the research.</p>
             </div>
         </div>
-
-
-
-
-        
+    </div>
     <script>
         function toggleAbstract() {
             var abstractDiv = document.getElementById('abstractContent');
