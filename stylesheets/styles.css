@@ -1,130 +1,111 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 
 body {
-  padding: 20px;
-  font: 14px/1.4 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/1.6 "Open Sans", sans-serif;
   color: #2d2d2d;
-  font-weight: 300;
+  background-color: #f9f9f9;
+  margin: 0;
 }
 
 .main-container {
-  max-width: 900px; /* Limit the maximum width for readability */
-  margin: auto;
-  padding: 20px;
+  width: 60%; /* Occupies 60% of the page width */
+  max-width: 850px;
+  margin: 0 auto; /* Center the container */
+  padding: 40px 20px; /* Padding for inner spacing */
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners */
 }
 
 .container {
   display: flex;
-  flex-direction: row; /* Keep image and bio side-by-side */
+  flex-direction: row;
   align-items: center;
-  padding: 20px 0;
-  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
 }
 
 .profile-image {
-  flex: 1; /* Allow the image to grow proportionally */
-  max-width: 25%; /* Set a maximum width for the profile image */
+  width: 30%;
   padding-right: 20px;
 }
 
 .profile-image img {
   width: 100%;
-  max-height: 250px; /* Limit the image height */
-  object-fit: cover; /* Maintain aspect ratio and fill the container */
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .bio {
-  flex: 2; /* Allow the bio section to take more space */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #222;
-  margin: 0 0 20px;
-  font-weight: 600;
+  width: 70%;
 }
 
 h1.main-heading {
-  font-size: 1.8em; /* Slightly smaller for a refined look */
-  font-weight: 500; /* Set to match the lighter heading style */
-  margin-bottom: 20px; /* Increase spacing below the main heading */
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .section-header {
-  font-size: 1.5em; /* Standardize section title size */
-  font-weight: 500; /* Set the weight for section headers */
-  margin-bottom: 10px;
+  font-size: 1.6em;
+  margin: 30px 0 10px;
+  font-weight: 500;
 }
 
-.bio p {
-  font-size: 14px; /* Match the body text size */
-  line-height: 1.5; /* Improve readability */
+p {
+  margin: 0 0 15px;
 }
 
 .button-container {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
-.button, a.button {
-  background-color: #e7e7e7;
-  border: 1px solid #ccc;
+.button {
+  padding: 8px 16px;
+  font-size: 14px;
   color: #333;
-  padding: 6px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px; /* Adjusted to match the paragraph size */
-  margin: 4px 2px;
-  cursor: pointer;
+  background-color: #e7e7e7;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.button:hover, a.button:hover {
-  background-color: #dcdcdc;
+.button:hover {
+  background-color: #d4d4d4;
 }
 
 .contact-button {
   width: auto;
-  min-width: 150px;
-  padding: 6px 12px;
-  font-size: 14px; /* Matching font size for consistency */
-  word-break: break-all;
+  min-width: 180px;
+  padding: 8px 16px;
   white-space: nowrap;
 }
 
-hr {
-  border: 0;
-  height: 1px;
-  background: #ccc;
-  margin: 20px 0;
-}
-
 @media (max-width: 1024px) {
-  .profile-image {
-    max-width: 30%;
+  .main-container {
+    width: 80%;
   }
 }
 
 @media (max-width: 768px) {
+  .main-container {
+    width: 90%;
+    padding: 20px;
+  }
+
   .container {
-    flex-direction: column; /* Stack image and bio vertically on smaller screens */
+    flex-direction: column;
     align-items: center;
   }
 
   .profile-image {
-    max-width: 80%;
-    margin-bottom: 20px; /* Add spacing below the image */
+    width: 80%;
+    margin-bottom: 20px;
   }
 }
 
-.abstract-section {
-  visibility: hidden;
-  height: 0;
-  overflow: hidden;
-  transition: visibility 0s, height 0.5s ease-out;
-}
 
 
   .profile-image {
