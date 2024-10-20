@@ -60,7 +60,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 10px;
+            font-size: 12px; /* Consistent font size for all buttons */
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 5px;
@@ -73,9 +73,10 @@
             color: #000; /* Keep black text on hover */
         }
         .contact-button {
-            width: auto;
-            padding: 4px 40px;
-            font-size: 10px;
+            width: auto; /* Automatically adjusts to the content */
+            padding: 6px 12px; /* Standard padding for a button feel */
+            word-break: break-all; /* Allows breaking the email address if it's very long */
+            white-space: nowrap; /* Prevents wrapping within the button */
         }
         .abstract-section {
             visibility: hidden;
@@ -155,4 +156,5 @@
     </script>
 </body>
 </html>
+
 
