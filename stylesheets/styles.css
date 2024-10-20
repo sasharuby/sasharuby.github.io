@@ -3,7 +3,7 @@
 body {
   font: 16px/1.6 "Open Sans", sans-serif;
   color: #2d2d2d;
-  background-color: #fff; /* Set entire background to white */
+  background-color: #fff;
   margin: 0;
 }
 
@@ -19,7 +19,7 @@ body {
 
 .container {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
   padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
@@ -31,7 +31,7 @@ body {
 
 .profile-image img {
   width: 100%;
-  max-height: 220px; /* Reduce the image height */
+  max-height: 220px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -44,9 +44,9 @@ h1.main-heading {
   font-size: 1.8em;
   font-weight: 600;
   margin-bottom: 0;
-  margin-top: 0; /* Remove extra margin to align with image */
+  margin-top: 0;
   display: flex;
-  align-items: center; /* Align with the top of the image */
+  align-items: center;
 }
 
 .section-header {
@@ -55,8 +55,10 @@ h1.main-heading {
   font-weight: 500;
 }
 
-p {
+.paper-title, p {
+  color: #2d2d2d;
   margin: 0 0 15px;
+  text-decoration: none;
 }
 
 .button-container {
@@ -66,21 +68,21 @@ p {
 }
 
 .button, a.button {
-  padding: 8px 12px;
-  font-size: 14px; /* Ensure consistent font size for all buttons */
-  color: #2d2d2d; /* Set text color to the same shade of grey used in the rest of the site */
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #2d2d2d;
   background-color: #e7e7e7;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none; /* Remove underline */
-  font-weight: 400; /* Consistent weight for all buttons */
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .button:hover, a.button:hover {
   background-color: #d4d4d4;
-  color: #2d2d2d; /* Keep the hover color consistent */
+  color: #2d2d2d;
 }
 
 .contact-button {
@@ -126,3 +128,4 @@ hr {
   overflow: hidden;
   transition: visibility 0s, height 0.5s ease-out;
 }
+
