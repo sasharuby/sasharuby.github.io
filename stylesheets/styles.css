@@ -10,29 +10,29 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   margin: 0 0 20px;
-  font-weight: 600; /* Slightly bolder for headings */
+  font-weight: 600;
 }
 
 h1.main-heading {
-  font-size: 1.8em; /* Slightly smaller for a refined look */
-  font-weight: 500; /* Set to match the lighter heading style */
-  margin-bottom: 20px; /* Increase spacing below the main heading */
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .section-header {
-  font-size: 1.5em; /* Keep section headers slightly smaller */
-  font-weight: 500; /* Set the weight for section headers */
+  font-size: 1.5em;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
 .bio p {
-  font-size: 14px; /* Match the body text size */
-  line-height: 1.5; /* Improve readability */
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .button-container {
   display: flex;
-  gap: 10px; /* Space between buttons */
+  gap: 10px;
 }
 
 .button, a.button {
@@ -43,7 +43,7 @@ h1.main-heading {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 14px; /* Adjusted to match the paragraph size */
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 5px;
@@ -57,7 +57,7 @@ h1.main-heading {
   width: auto;
   min-width: 150px;
   padding: 6px 12px;
-  font-size: 12px;
+  font-size: 14px; /* Matching font size for consistency */
   word-break: break-all;
   white-space: nowrap;
 }
@@ -67,6 +67,26 @@ hr {
   height: 1px;
   background: #ccc;
   margin: 20px 0;
+}
+
+.profile-image img {
+  width: 100%;
+  max-height: 250px; /* Set a maximum height for the profile image */
+  object-fit: cover; /* Maintain the aspect ratio and crop if necessary */
+  border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+  .profile-image {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-image {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .abstract-section {
