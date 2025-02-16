@@ -25,7 +25,7 @@ body {
 .profile-image {
     flex-shrink: 0; /* Prevents the image from shrinking */
     width: 200px; /* Set the width you want for the image */
-    height: 700px; /* Auto-adjusts the height to maintain aspect ratio */
+    height: 300px; /* Auto-adjusts the height to maintain aspect ratio */
 }
 
 .profile-image img {
