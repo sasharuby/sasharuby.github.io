@@ -19,33 +19,29 @@ body {
 
 .container {
     display: flex;
-    align-items: flex-start;  /* Aligns items at the top */
+    align-items: flex-start; /* Align items at the top */
 }
 
 .profile-image {
-    flex-shrink: 0;  /* Prevents the image from shrinking */
-    width: 200px;  /* Fixed width for the image */
-    height: auto;  /* Height will adjust automatically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 200px; /* Set the width you want for the image */
+    height: auto; /* Auto-adjusts the height to maintain aspect ratio */
 }
 
 .profile-image img {
-    width: 100%;  /* Ensures the image width fills the container */
-    height: auto;  /* Height adjusts based on the aspect ratio */
-    object-fit: cover;  /* Ensures the image covers the area nicely without distortion */
-    border-radius: 8px;  /* Optional: adds rounded corners to the image */
+    width: 100%; /* Image will fill the container width */
+    height: 100%; /* Image will fill the container height determined by aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Optional: Adds rounded corners */
 }
 
 .bio {
-    flex-grow: 1;  /* Allows the text section to take the remaining space */
+    flex-grow: 1; /* Allows the text section to take the remaining space */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Distributes space around content */
-    padding: 20px;  /* Optional: adds padding around the text for better spacing */
+    justify-content: space-between; /* Distributes space around content, if needed */
+    padding: 20px; /* Adds padding around the text for better spacing */
 }
-
 
 h1.main-heading {
   font-size: 1.8em;
