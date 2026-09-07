@@ -138,4 +138,10 @@ hr {
   transition: visibility 0s, height 0.5s ease-out;
 }
 
+.section p {
+  margin-bottom: 5px;
+}
 
+.abstract-section + a {
+  margin-top: 25px;
+}
